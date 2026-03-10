@@ -17,7 +17,7 @@ const Login = ({ setToggle }) => {
   const onSubmit = async (data) => {
     try {
       console.log("data",data)
-      let res = await axiosInstance.post("user/login", data, {
+      let res = await axiosInstance.post("auth/user/login", data, {
         withCredentials: true,
       });
       if (res) {

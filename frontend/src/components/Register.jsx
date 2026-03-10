@@ -17,7 +17,7 @@ const Register = ({ setToggle }) => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await axiosInstance.post("/user/register", data, {
+      const res = await axiosInstance.post("auth/user/register", data, {
         withCredentials: true,
       });
 
@@ -47,7 +47,7 @@ const Register = ({ setToggle }) => {
       // If API succeeded but user missing, still navigate to home
       if (res?.status >= 200 && res?.status < 300) {
         console.warn("Registration succeeded but no user in response; redirecting to /home");
-        navigate("/home");
+        
       }
     } catch (error) {
       console.log("error in register api", error?.response?.data || error);
