@@ -53,48 +53,53 @@ const App = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-[999] flex items-center justify-between px-[6%] py-[18px] transition-shadow duration-300 md:px-[5%] ${isScrolled ? (isDarkMode ? 'shadow-[0_2px_24px_rgba(0,0,0,0.22)] bg-black/75 backdrop-blur-[18px] border-b border-[#333]' : 'shadow-[0_2px_24px_rgba(0,0,0,0.15)] bg-white/85 backdrop-blur-[18px] border-b border-[#d8d8d8]') : (isDarkMode ? 'bg-gradient-to-b from-[#0f172a]/80 via-[#111827]/70 to-[#0f172a]/55 backdrop-blur-[16px] border-b border-[#333]' : 'bg-gradient-to-b from-[#f8fafc]/80 via-[#f1f5f9]/75 to-[#f8fafc]/55 backdrop-blur-[16px] border-b border-[#d8d8d8]')}`}
       >
-        <a href="#" className={`text-[1.4rem] font-bold tracking-[-0.5px] ${isDarkMode ? 'text-white' : 'text-[#1a1a2e]'}`}>
-         PD <span className="text-[#e63946]">.</span>
-        </a>
+        <div className="flex items-center gap-8">
+          <a href="#" className={`text-[1.4rem] font-bold tracking-[-0.5px] ${isDarkMode ? 'text-white' : 'text-[#1a1a2e]'}`}>
+            PD <span className="text-[#e63946]">.</span>
+          </a>
 
-        {/* Desktop Links */}
-        <ul className="hidden md:flex gap-9 list-none p-0 m-0">
-          {['Home', 'Skills', 'Projects', 'Resume', 'Contact'].map((item) => (
-            <li key={item}>
-              <a
-                href={`#${item.toLowerCase()}`}
-                className={`text-[0.88rem] font-medium tracking-[0.3px] hover:text-[#e63946] transition-colors duration-200 ${isDarkMode ? 'text-white' : 'text-[#1a1a2e]'}`}
-              >
-                {item}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <a
-          href="#contact"
-          className="hidden md:inline-block bg-[#e63946] text-white px-6 py-2.5 rounded-full text-[0.88rem] font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(230,57,70,0.35)]"
-        >
-          Contact Me
-        </a>
+          {/* Desktop Links */}
+          <ul className="hidden md:flex gap-9 list-none p-0 m-0">
+            {['Home', 'Skills', 'Projects', 'Resume', 'Contact'].map((item) => (
+              <li key={item}>
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className={`text-[0.88rem] font-medium tracking-[0.3px] hover:text-[#e63946] transition-colors duration-200 ${isDarkMode ? 'text-white' : 'text-[#1a1a2e]'}`}
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        <button
-          onClick={() => setIsDarkMode(!isDarkMode)}
-          className={`ml-3 hidden md:inline-flex items-center justify-center w-10 h-10 rounded-full border transition-colors duration-200 ${isDarkMode ? 'bg-black text-white hover:bg-white hover:text-[#1a1a2e]' : 'bg-white text-[#1a1a2e] hover:bg-[#1a1a2e] hover:text-white'}`}
-          aria-label="Toggle dark/light theme"
-          title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-        >
-          <i className={isDarkMode ? 'fas fa-sun' : 'fas fa-moon'}></i>
-        </button>
+        <div className="flex items-center gap-3">
+          <a
+            href="#contact"
+            className="hidden md:inline-block bg-[#e63946] text-white px-6 py-2.5 rounded-full text-[0.88rem] font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(230,57,70,0.35)]"
+          >
+            Contact Me
+          </a>
 
-        {/* Hamburger */}
-        <button
-          className="md:hidden flex flex-col gap-[5px] cursor-pointer bg-none border-none z-50"
-          onClick={() => setIsNavOpen(!isNavOpen)}
-        >
-          <span className="w-6 h-0.5 bg-[#2d2d2d] rounded transition-transform"></span>
-          <span className="w-6 h-0.5 bg-[#2d2d2d] rounded transition-transform"></span>
-          <span className="w-6 h-0.5 bg-[#2d2d2d] rounded transition-transform"></span>
-        </button>
+          <button
+            onClick={() => setIsDarkMode(!isDarkMode)}
+            className={`ml-3 hidden md:inline-flex items-center justify-center w-10 h-10 rounded-full border transition-colors duration-200 ${isDarkMode ? 'bg-black text-white hover:bg-white hover:text-[#1a1a2e]' : 'bg-white text-[#1a1a2e] hover:bg-[#1a1a2e] hover:text-white'}`}
+            aria-label="Toggle dark/light theme"
+            title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+          >
+            <i className={isDarkMode ? 'fas fa-sun' : 'fas fa-moon'}></i>
+          </button>
+
+          {/* Hamburger */}
+          <button
+            className="md:hidden flex flex-col gap-[5px] cursor-pointer bg-none border-none z-50"
+            onClick={() => setIsNavOpen(!isNavOpen)}
+          >
+            <span className="w-6 h-0.5 bg-[#2d2d2d] rounded transition-transform"></span>
+            <span className="w-6 h-0.5 bg-[#2d2d2d] rounded transition-transform"></span>
+            <span className="w-6 h-0.5 bg-[#2d2d2d] rounded transition-transform"></span>
+          </button>
+        </div>
 
         {/* Mobile Menu */}
         {isNavOpen && (
@@ -112,13 +117,6 @@ const App = () => {
                 </li>
               ))}
             </ul>
-            <a
-              href="#contact"
-              onClick={() => setIsNavOpen(false)}
-              className="mt-4 bg-[#e63946] text-white px-6 py-3 rounded-full text-center font-semibold"
-            >
-              Hire Me
-            </a>
             <button
               onClick={() => { setIsDarkMode(!isDarkMode); setIsNavOpen(false); }}
               className="mt-3 flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#333] text-white hover:bg-white hover:text-[#1a1a2e]"
@@ -503,23 +501,23 @@ const App = () => {
           {[
             { icon: 'phone', label: 'Phone', value: '+91 9399471399', link: 'tel:+919399471399' },
             { icon: 'envelope', label: 'Email', value: 'pratikdeshmukh12102004@gmail.com', link: 'mailto:pratikdeshmukh12102004@gmail.com' },
-            { icon: 'linkedin-in', prefix: 'fab', label: 'LinkedIn', value: 'linkedin.com/in/pratik-deshmukh', link: 'https://linkedin.com/in/pratik-deshmukh' },
+            { icon: 'linkedin-in', prefix: 'fab', label: 'LinkedIn', value: 'linkedin.com/in/pratik-deshmukh', link: 'https://www.linkedin.com/in/pratik-deshmukh-82066228a/' },
             { icon: 'map-marker-alt', label: 'Location', value: 'Bhopal, Madhya Pradesh, India' },
           ].map((c, idx) => (
-            <div key={idx} className="flex gap-4 items-start bg-black rounded-[20px] p-5">
+            <div key={idx} className="flex flex-wrap sm:flex-nowrap gap-4 items-start bg-black rounded-[20px] p-5 min-w-0">
               <div className="w-11 h-11 rounded-xl bg-red-500/10 flex items-center justify-center text-[#e63946] text-[1rem] shrink-0">
                 <i className={`${c.prefix || 'fas'} fa-${c.icon}`}></i>
               </div>
-              <div>
+              <div className="min-w-0">
                 <div className="text-[0.78rem] font-bold text-[#888] uppercase tracking-[1px] mb-1">
                   {c.label}
                 </div>
                 {c.link ? (
-                  <a href={c.link} target={c.link.startsWith('http') ? "_blank" : "_self"} rel="noopener noreferrer" className="text-[0.93rem] font-medium text-white">
+                  <a href={c.link} target={c.link.startsWith('http') ? "_blank" : "_self"} rel="noopener noreferrer" className="text-[0.93rem] font-medium text-white break-words leading-tight">
                     {c.value}
                   </a>
                 ) : (
-                  <div className="text-[0.93rem] font-medium text-white">
+                  <div className="text-[0.93rem] font-medium text-white break-words leading-tight">
                     {c.value}
                   </div>
                 )}
