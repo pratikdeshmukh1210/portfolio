@@ -155,7 +155,7 @@ const App = () => {
               href="#contact"
               className="bg-[#e63946] text-white px-8 py-3.5 rounded-full text-[0.95rem] font-semibold flex items-center gap-2 hover:-translate-y-[3px] hover:shadow-[0_8px_28px_rgba(230,57,70,0.35)] transition-all"
             >
-              <i className="fas fa-paper-plane"></i> Content Me
+              <i className="fas fa-paper-plane"></i> Contact Me
             </a>
             <a
               href="#portfolio"
