@@ -148,7 +148,7 @@ const App = () => {
             MERN Stack Developer
           </h2>
           <p className="text-[#666] text-[1rem] leading-[1.8] max-w-[480px] mb-10 mx-auto md:mx-0">
-            Full-stack developer with strong command of JavaScript, React, Node.js, Express, and MongoDB. I build responsive UIs, integrate APIs, and implement secure authentication — turning ideas into production-ready web apps.
+            MERN Stack Developer with strong command of Java, JavaScript, React, Node.js, Express, and MongoDB. I build responsive UIs, integrate APIs, and implement secure authentication — turning ideas into production-ready web apps.
           </p>
           <div className="flex gap-4 items-center flex-wrap mb-12 justify-center md:justify-start">
             <a
@@ -327,7 +327,7 @@ const App = () => {
           <div className="bg-[#0f172a] rounded-[20px] overflow-hidden shadow-[0_4px_32px_rgba(0,0,0,0.35)] hover:shadow-[0_12px_48px_rgba(230,57,70,0.3)] transition-all duration-300 border border-[#223054] hover:-translate-y-1.5">
             <div className="h-[200px] relative overflow-hidden flex items-center justify-center bg-gradient-to-br from-[#1a1a2e] to-[#e63946]">
               <div className="absolute top-4 left-4 bg-[#e63946] text-white text-[0.72rem] font-bold px-3 py-1 rounded-full tracking-[0.5px] uppercase">
-                Full Stack
+                MERN Stack
               </div>
               <div className="font-sans text-[1.5rem] font-bold text-white z-10 text-center px-5">
                 StudentMart
@@ -415,8 +415,8 @@ const App = () => {
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`px-6 py-2.5 rounded-full border-[1.5px] font-semibold text-[0.88rem] transition-colors cursor-pointer ${activeTab === tab.id
-                  ? 'bg-[#e63946] border-[#e63946] text-white'
-                  : 'bg-[#111827] border-[#2a2f3f] text-[#cbd5e1] hover:border-[#e63946] hover:text-[#e63946]'
+                ? 'bg-[#e63946] border-[#e63946] text-white'
+                : 'bg-[#111827] border-[#2a2f3f] text-[#cbd5e1] hover:border-[#e63946] hover:text-[#e63946]'
                 }`}
             >
               {tab.label}
@@ -467,7 +467,7 @@ const App = () => {
               { icon: 'robot', name: 'Gemini Certified Student', issuer: 'Google', year: '2025 · Built a Power AI Project' },
               { icon: 'layer-group', name: 'MERN Stack Web Dev', issuer: 'Sheryians Coding School', year: '2025' },
               { icon: 'network-wired', name: 'Introduction to Modern AI', issuer: 'Cisco Networking Academy', year: '2026' },
-             
+
             ].map((c, idx) => (
               <div key={idx} className="bg-[#0f172a] rounded-[20px] p-6 shadow-[0_4px_32px_rgba(0,0,0,0.35)] border border-[#223054] flex gap-4 items-start hover:border-red-500/20 hover:-translate-y-1 transition-all">
                 <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-red-500/10 to-pink-500/10 flex items-center justify-center text-[1.1rem] text-[#e63946] shrink-0">
@@ -494,7 +494,7 @@ const App = () => {
           Contact Me
         </h2>
         <p className="text-[#888] text-[0.95rem] sm:text-[1rem] max-w-[520px] leading-[1.75] mb-10 sm:mb-14">
-         Let’s connect and build something meaningful.
+          Let’s connect and build something meaningful.
         </p>
 
         <div className="flex flex-col gap-5 max-w-[500px]">
@@ -537,8 +537,8 @@ const App = () => {
         <div className={`font-sans text-[1.3rem] font-bold ${isDarkMode ? 'text-white' : 'text-[#1a1a2e]'}`}>
           PD<span className="text-[#e63946]">.</span>
         </div>
-        <p className={`${isDarkMode ? 'text-white/40' : 'text-[#3f4a59]'} text-[0.85rem] m-0`}>  Learning by building 
-</p>
+        <p className={`${isDarkMode ? 'text-white/40' : 'text-[#3f4a59]'} text-[0.85rem] m-0`}>  Learning by building
+        </p>
         <div className="flex gap-3">
           {[
             { icon: 'linkedin-in', link: 'https://www.linkedin.com/in/pratik-deshmukh-82066228a/' },
